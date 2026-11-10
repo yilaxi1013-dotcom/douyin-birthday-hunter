@@ -1,0 +1,48 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Python 语法检查
+        run: python -m compileall -q skill/scripts
+
+      - name: SKILL.md 元信息
+        run: |
+          python - <<'PY'
+          import re, sys, pathlib
+          text = pathlib.Path("skill/SKILL.md").read_text(encoding="utf-8")
+          m = re.match(r"^---\n(.*?)\n---", text, re.S)
+          if not m:
+              sys.exit("SKILL.md 缺少 YAML frontmatter")
+          fm = m.group(1)
+          for key in ("name:", "description:"):
+              if key not in fm:
+                  sys.exit(f"frontmatter 缺少 {key}")
+          print("frontmatter ok")
+          PY
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Node 脚本语法检查
+        run: |
+          for f in skill/vendor/scripts/*.mjs; do
+            node --check "$f"
+            echo "ok $f"
+          done
+
+      - name: 配置示例可解析
+        run: python -c "import json;json.load(open('examples/config.sample.json',encoding='utf-8'));print('config ok')"
