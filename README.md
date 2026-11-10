@@ -10,6 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-8e3b6b.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org)
 [![Node](https://img.shields.io/badge/Node-18%2B-339933.svg)](https://nodejs.org)
+[![validate](https://github.com/yilaxi1013-dotcom/douyin-birthday-hunter/actions/workflows/validate.yml/badge.svg)](https://github.com/yilaxi1013-dotcom/douyin-birthday-hunter/actions/workflows/validate.yml)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#贡献)
 [![Stars](https://img.shields.io/github/stars/yilaxi1013-dotcom/douyin-birthday-hunter?style=social)](https://github.com/yilaxi1013-dotcom/douyin-birthday-hunter/stargazers)
 
