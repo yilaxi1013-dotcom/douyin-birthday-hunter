@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8e3b6b"/>
+    </marker>
+    <linearGradient id="head" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8e3b6b"/>
+      <stop offset="100%" stop-color="#c2547f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="420" fill="#ffffff"/>
+
+  <!-- 标题 -->
+  <text x="40" y="52" font-size="22" font-weight="700" fill="#1a1a1a">从一条生日到一份名单：六步流水线</text>
+  <text x="40" y="78" font-size="13" fill="#6b7280">Six-stage pipeline · 接口重放并发拉取 + 楼层上下文判定</text>
+
+  <!-- 连线 -->
+  <g stroke="#8e3b6b" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M 200 190 H 232"/>
+    <path d="M 372 190 H 404"/>
+    <path d="M 544 190 H 576"/>
+    <path d="M 716 190 H 748"/>
+    <path d="M 888 190 H 920"/>
+    <path d="M 1060 190 H 1092"/>
+  </g>
+
+  <!-- 六个步骤 -->
+  <g>
+    <!-- 1 -->
+    <rect x="40" y="140" width="160" height="100" rx="12" fill="#faf7f9" stroke="#e7d3de"/>
+    <text x="56" y="168" font-size="12" fill="#8e3b6b" font-weight="700">STEP 0</text>
+    <text x="56" y="192" font-size="15" font-weight="600" fill="#1a1a1a">初始化</text>
+    <text x="56" y="214" font-size="11" fill="#6b7280">生日 → config.json</text>
+    <text x="56" y="230" font-size="11" fill="#6b7280">11 条正则自动生成</text>
+
+    <!-- 2 -->
+    <rect x="240" y="140" width="140" height="100" rx="12" fill="#faf7f9" stroke="#e7d3de"/>
+    <text x="256" y="168" font-size="12" fill="#8e3b6b" font-weight="700">STEP 1</text>
+    <text x="256" y="192" font-size="15" font-weight="600" fill="#1a1a1a">启动浏览器</text>
+    <text x="256" y="214" font-size="11" fill="#6b7280">独立 profile</text>
+    <text x="256" y="230" font-size="11" fill="#6b7280">保留登录态</text>
+
+    <!-- 3 -->
+    <rect x="412" y="140" width="140" height="100" rx="12" fill="#faf7f9" stroke="#e7d3de"/>
+    <text x="428" y="168" font-size="12" fill="#8e3b6b" font-weight="700">STEP 2</text>
+    <text x="428" y="192" font-size="15" font-weight="600" fill="#1a1a1a">搜合集视频</text>
+    <text x="428" y="214" font-size="11" fill="#6b7280">拦截搜索接口</text>
+    <text x="428" y="230" font-size="11" fill="#6b7280">按评论量排序</text>
+
+    <!-- 4 高亮 -->
+    <rect x="584" y="132" width="140" height="116" rx="12" fill="#8e3b6b"/>
+    <text x="600" y="160" font-size="12" fill="#f3d9e5" font-weight="700">STEP 3</text>
+    <text x="600" y="184" font-size="15" font-weight="700" fill="#ffffff">接口重放</text>
+    <text x="600" y="206" font-size="11" fill="#f6e3ec">8 路并发翻页</text>
+    <text x="600" y="222" font-size="11" fill="#f6e3ec">锚点楼拉回复</text>
+    <text x="600" y="240" font-size="10" fill="#e9bfd2">快 50 倍</text>
+
+    <!-- 5 -->
+    <rect x="756" y="140" width="140" height="100" rx="12" fill="#faf7f9" stroke="#e7d3de"/>
+    <text x="772" y="168" font-size="12" fill="#8e3b6b" font-weight="700">STEP 4</text>
+    <text x="772" y="192" font-size="15" font-weight="600" fill="#1a1a1a">判定去重</text>
+    <text x="772" y="214" font-size="11" fill="#6b7280">年份+月日才认</text>
+    <text x="772" y="230" font-size="11" fill="#6b7280">剔除农历口径</text>
+
+    <!-- 6 -->
+    <rect x="928" y="140" width="140" height="100" rx="12" fill="#faf7f9" stroke="#e7d3de"/>
+    <text x="944" y="168" font-size="12" fill="#8e3b6b" font-weight="700">STEP 5</text>
+    <text x="944" y="192" font-size="15" font-weight="600" fill="#1a1a1a">生成表格</text>
+    <text x="944" y="214" font-size="11" fill="#6b7280">横版 A4 Word</text>
+    <text x="944" y="230" font-size="11" fill="#6b7280">表头跨页重复</text>
+
+    <!-- 7 -->
+    <rect x="1100" y="140" width="70" height="100" rx="12" fill="#fdf6f9" stroke="#e7d3de" stroke-dasharray="4 3"/>
+    <text x="1112" y="168" font-size="11" fill="#8e3b6b" font-weight="700">STEP 6</text>
+    <text x="1112" y="190" font-size="13" font-weight="600" fill="#1a1a1a">问你要</text>
+    <text x="1112" y="208" font-size="13" font-weight="600" fill="#1a1a1a">不要开</text>
+    <text x="1112" y="226" font-size="11" fill="#6b7280">主页</text>
+  </g>
+
+  <!-- 底部说明 -->
+  <g>
+    <rect x="40" y="300" width="540" height="80" rx="10" fill="#f7f7f8" stroke="#e5e7eb"/>
+    <text x="58" y="326" font-size="13" font-weight="600" fill="#1a1a1a">为什么快</text>
+    <text x="58" y="348" font-size="12" fill="#4b5563">捕获一条真实评论请求作模板，在页面内改 aweme_id / cursor 并发 fetch，</text>
+    <text x="58" y="366" font-size="12" fill="#4b5563">服务端不校验签名参数 —— 单视频 7 万条约 3–5 分钟。</text>
+
+    <rect x="620" y="300" width="540" height="80" rx="10" fill="#f7f7f8" stroke="#e5e7eb"/>
+    <text x="638" y="326" font-size="13" font-weight="600" fill="#1a1a1a">为什么要锚点楼</text>
+    <text x="638" y="348" font-size="12" fill="#4b5563">很多人在「99年包厢 / 集合」楼下只回一个 1203。父楼层给出年份，</text>
+    <text x="638" y="366" font-size="12" fill="#4b5563">回复给出月日 —— 两者拼起来才是完整生日。</text>
+  </g>
+</svg>

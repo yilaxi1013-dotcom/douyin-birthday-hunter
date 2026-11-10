@@ -1,0 +1,22 @@
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 运行时产物
+work/
+dy_hunt_*/
+*.log
+edge-profile/
+.pw-src/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/

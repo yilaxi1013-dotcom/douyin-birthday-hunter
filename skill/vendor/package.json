@@ -1,0 +1,10 @@
+{
+  "name": "douyin-birthday-hunter-vendor",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "随技能打包的 Node 依赖：playwright-core（浏览器 CDP 控制）",
+  "dependencies": {
+    "playwright-core": "^1.65.0"
+  }
+}
